@@ -1,11 +1,17 @@
 import React from 'react';
-import {Nav, NavMenu, NavItem, NavLink, NavBarContainer} from "./NavBarStyle";
+import {FaBars} from 'react-icons/fa';
+import {Nav, NavMenu, NavItem, NavLink, NavBarContainer, MobileIcon} from "./NavBarStyle";
+import Search from "../search";
 
 const NavBar = () => {
     return (
         <>
             <Nav>
+                <Search/>
                 <NavBarContainer>
+                    <MobileIcon>
+                        <FaBars/>
+                    </MobileIcon>
                     <NavMenu>
                         <NavItem>
                             <NavLink to='/'>Categories</NavLink>

@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   height: 80px;
   //margin-top: -80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 1rem;
   top: 0;
@@ -29,7 +29,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-    height: 80px;
+  height: 80px;
 `
 
 export const NavLink = styled(LinkR)`
@@ -48,10 +48,24 @@ export const NavLink = styled(LinkR)`
 
 export const NavBarContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 90px;
   z-index: 1;
   width: 100%;
-  //padding: 0 24px;
+  padding: 0 24px;
   max-width: 1100px;
+`
+export const MobileIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    transform: translate(-100, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
 `
