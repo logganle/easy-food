@@ -3,13 +3,13 @@ import {FaBars} from 'react-icons/fa';
 import {Nav, NavMenu, NavItem, NavLink, NavBarContainer, MobileIcon} from "./NavBarStyle";
 import Search from "../search";
 
-const NavBar = () => {
+const NavBar = ({toggle}) => {
     return (
         <>
             <Nav>
                 <Search/>
                 <NavBarContainer>
-                    <MobileIcon>
+                    <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
                     <NavMenu>
