@@ -7,6 +7,7 @@ import React, {useState} from "react";
 import CategoryPage from "./components/pages/CategoryPage";
 import {Provider} from "react-redux";
 import store from "./components/store";
+import SearchPage from "./components/pages/SearchPage";
 
 function App() {
     const [isSideBarOpen, setSideBarStatus] = useState(false);
@@ -18,8 +19,8 @@ function App() {
                 <NavBar toggle={toggle}/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
-                    <Route path='/categories' element={<CategoryPage searchFilter="categories"/>}/>
-                    <Route path='/countries' element={<CategoryPage searchFilter="countries"/>}/>
+                    <Route path='/categories' element={<CategoryPage/>}/>
+                    <Route path='/search' element={<SearchPage/>}/>
                 </Routes>
             </BrowserRouter>
         </Provider>
