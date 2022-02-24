@@ -8,6 +8,7 @@ import CategoryPage from "./components/pages/CategoryPage";
 import {Provider} from "react-redux";
 import store from "./components/store";
 import SearchPage from "./components/pages/SearchPage";
+import MealDetailPage from "./components/pages/MealDetailPage";
 
 function App() {
     const [isSideBarOpen, setSideBarStatus] = useState(false);
@@ -21,6 +22,7 @@ function App() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/categories' element={<CategoryPage/>}/>
                     <Route path='/search' element={<SearchPage/>}/>
+                    <Route path='/meals/:id' element={<MealDetailPage/>}/>
                 </Routes>
             </BrowserRouter>
         </Provider>

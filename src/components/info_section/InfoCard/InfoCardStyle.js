@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Card = styled.div`
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
   background-color: #fff;
-  margin: 15px;
-  max-height: 500px;
-
+  max-height: 350px;
+  
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
