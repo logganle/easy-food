@@ -1,12 +1,13 @@
 import React from 'react';
 import {FaBars} from 'react-icons/fa';
 import {Nav, NavMenu, NavItem, NavLink, NavBarContainer, MobileIcon} from "./NavBarStyle";
+import Search from "../search";
 
 const NavBar = ({toggle}) => {
     return (
         <>
             <Nav>
-                {/*<Search/>*/}
+                <Search/>
                 <NavBarContainer>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
@@ -18,9 +19,9 @@ const NavBar = ({toggle}) => {
                         <NavItem>
                             <NavLink to='/categories'>Categories</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink to='/search'>Search</NavLink>
-                        </NavItem>
+                        {/*<NavItem>*/}
+                        {/*    <NavLink to='/search'>Search</NavLink>*/}
+                        {/*</NavItem>*/}
                     </NavMenu>
                 </NavBarContainer>
             </Nav>

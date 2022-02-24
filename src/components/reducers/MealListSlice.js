@@ -13,14 +13,36 @@ export const MealListSlice = createSlice({
     }
 });
 
-export const {updateMealListSlice} = MealListSlice.actions;
+export const {updateMealListSlice, filterMeal} = MealListSlice.actions;
 
 const BASEURL = 'https://www.themealdb.com/api/json/v1/1/filter.php';
 
-export const filterMeals = (filters) => {
+export const filterMealsBySpecificCategory = (filters) => {
     return async (dispatch) => {
         const params = {
             ...filters
+        }
+        const data = await axios.get(BASEURL, {params});
+        const meals = data.data.meals;
+        dispatch(updateMealListSlice(meals));
+    }
+}
+
+export const SearchMealByName= (keyWord) => {
+    return async (dispatch) => {
+        const params = {
+            s: keyWord
+        }
+        const data = await axios.get("https://www.themealdb.com/api/json/v1/1/search.php", {params});
+        const meals = data.data.meals;
+        dispatch(updateMealListSlice(meals));
+    }
+}
+
+export const filterMealBasedOnTime = () => {
+    return async (dispatch) => {
+        const params = {
+            c: 'Breakfast'
         }
         const data = await axios.get(BASEURL, {params});
         const meals = data.data.meals;

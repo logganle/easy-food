@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import MealListSection from "../info_section/MealListSection";
-import {filterMeals} from "../reducers/MealListSlice";
+import {filterMealBasedOnTime, filterMealsBySpecificCategory} from "../reducers/MealListSlice";
 import {useParams} from "react-router-dom";
 
 const Home = () => {
@@ -11,12 +11,9 @@ const Home = () => {
     //implement based on timezone
     useEffect(() => {
         if (parameters.c === undefined) {
-            const filters = {
-                c: 'Breakfast'
-            }
-            dispatch(filterMeals(filters));
+            dispatch(filterMealBasedOnTime());
         } else {
-            dispatch(filterMeals({c: parameters.c}))
+            dispatch(filterMealsBySpecificCategory({c: parameters.c}))
         }
 
     }, []);

@@ -7,7 +7,7 @@ import React, {useState} from "react";
 import CategoryPage from "./components/pages/CategoryPage";
 import {Provider} from "react-redux";
 import store from "./components/store";
-import SearchPage from "./components/pages/SearchPage";
+// import SearchPage from "./components/pages/SearchPage";
 import MealDetailPage from "./components/pages/MealDetailPage";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/:c' element={<Home/>}/>
                     <Route path='/categories' element={<CategoryPage/>}/>
-                    <Route path='/search' element={<SearchPage/>}/>
+                    {/*<Route path='/search' element={<SearchPage/>}/>*/}
                     <Route path='/meals/:id' element={<MealDetailPage/>}/>
                 </Routes>
             </BrowserRouter>
