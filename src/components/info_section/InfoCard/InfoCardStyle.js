@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link as LinkR} from 'react-router-dom';
 
 export const Card = styled.div`
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
@@ -10,7 +11,7 @@ export const Card = styled.div`
   }
 `
 
-export const CardLink = styled.a`
+export const CardLink = styled(LinkR)`
   text-decoration: none;
   display: flex;
   flex-direction: column;

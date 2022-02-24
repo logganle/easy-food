@@ -20,6 +20,7 @@ function App() {
                 <NavBar toggle={toggle}/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
+                    <Route path='/:c' element={<Home/>}/>
                     <Route path='/categories' element={<CategoryPage/>}/>
                     <Route path='/search' element={<SearchPage/>}/>
                     <Route path='/meals/:id' element={<MealDetailPage/>}/>

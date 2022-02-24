@@ -1,10 +1,10 @@
 import React from 'react';
 import {Card, CardBody, CardImage, CardLink, CardTitle} from "./InfoCardStyle";
 
-const MealCard = ({strMeal, strMealThumb}) => {
+const MealCard = ({strMeal, strMealThumb, idMeal}) => {
     return (
         <Card>
-            <CardLink>
+            <CardLink to={`/meals/${idMeal}`}>
                 <CardImage src = {strMealThumb}/>
                 <CardBody>
                     <CardTitle>{strMeal}</CardTitle>

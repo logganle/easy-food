@@ -10,7 +10,7 @@ import {
 const CategoryCard = ({strCategory, strCategoryThumb}) => {
     return (
         <Card>
-            <CardLink>
+            <CardLink to={`/${strCategory}`}>
                 <CardImage src={strCategoryThumb}/>
                 <CardBody>
                     <CardTitle>{strCategory}</CardTitle>
